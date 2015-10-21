@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>owari</title>
+</head>
+<body>
+  <img src="burial.jpg" id="burial" />
+  <script src="audio5.min.js"></script>
+  <script>
+    function initAudio () {
+      var audio5js = new Audio5js({
+        ready: function () {
+          this.load('/o.wav');
+        }
+      });
+      var img = document.getElementById("burial");
+      img.onclick = function() {
+        audio5js.play();
+      };
+    }
+    initAudio();
+  </script>
+</body>
+</html>
+
